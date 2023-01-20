@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+    <title></title>
+    <link rel="icon" type="image/x-icon" href="data:image/png;base64,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">
+    <style>
+
+@import 'https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300';
+
+html,
+body {
+width: 100%;
+height: 100%;
+overflow: hidden;
+margin: 0;
+display: flex;
+flex-direction: column;
+flex-wrap: wrap;
+font-family: 'Open Sans Condensed', sans-serif;
+}
+
+div[class*=box] {
+height: 33.33%;
+width: 100%; 
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.box-1 { background-color: #FF6766; }
+.box-2 { background-color: #3C3C3C; }
+.box-3 { background-color: #66A182; }
+
+.btn {
+line-height: 50px;
+height: 50px;
+text-align: center;
+width: 250px;
+cursor: pointer;
+}
+
+/* 
+========================
+    BUTTON ONE
+========================
+*/
+.btn-one {
+color: #FFF;
+transition: all 0.3s;
+position: relative;
+}
+.btn-one span {
+transition: all 0.3s;
+
+z-index: 2; 
+display: block;
+position: absolute;
+width: 100%;
+height: 100%; 
+
+}
+.btn-one::before {
+content: '';
+position: absolute;
+bottom: 0;
+left: 0;
+width: 100%;
+height: 100%;
+z-index: 1;
+opacity: 0;
+transition: all 0.3s;
+border-top-width: 1px;
+border-bottom-width: 1px;
+border-top-style: solid;
+border-bottom-style: solid;
+border-top-color: rgba(255,255,255,0.5);
+border-bottom-color: rgba(255,255,255,0.5);
+transform: scale(0.1, 1);
+}
+.btn-one:hover span {
+letter-spacing: 2px;
+}
+.btn-one:hover::before {
+opacity: 1; 
+transform: scale(1, 1); 
+}
+.btn-one::after {
+content: '';
+position: absolute;
+bottom: 0;
+left: 0;
+width: 100%;
+height: 100%;
+z-index: 1;
+transition: all 0.3s;
+background-color: rgba(255,255,255,0.1);
+}
+.btn-one:hover::after {
+opacity: 0; 
+transform: scale(0.1, 1);
+}
+
+
+
+/* 
+========================
+    BUTTON TWO
+========================
+*/
+.btn-two {
+color: #FFF;
+transition: all 0.5s;
+position: relative; 
+}
+.btn-two span {
+z-index: 2; 
+display: block;
+position: absolute;
+width: 100%;
+height: 100%; 
+}
+.btn-two::before {
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+z-index: 1;
+transition: all 0.5s;
+border: 1px solid rgba(255,255,255,0.2);
+background-color: rgba(255,255,255,0.1);
+}
+.btn-two::after {
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+z-index: 1;
+transition: all 0.5s;
+border: 1px solid rgba(255,255,255,0.2);
+background-color: rgba(255,255,255,0.1);
+}
+.btn-two:hover::before {
+transform: rotate(-45deg);
+background-color: rgba(255,255,255,0);
+}
+.btn-two:hover::after {
+transform: rotate(45deg);
+background-color: rgba(255,255,255,0);
+}
+
+
+/* 
+========================
+    BUTTON THREE
+========================
+*/
+.btn-three {
+color: #FFF;
+transition: all 0.5s;
+position: relative;
+}
+.btn-three::before {
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+z-index: 1;
+background-color: rgba(255,255,255,0.1);
+transition: all 0.3s;
+}
+.btn-three:hover::before {
+opacity: 0 ;
+transform: scale(0.5,0.5);
+}
+.btn-three::after {
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+z-index: 1;
+opacity: 0;
+transition: all 0.3s;
+border: 1px solid rgba(255,255,255,0.5);
+transform: scale(1.2,1.2);
+}
+.btn-three:hover::after {
+opacity: 1;
+transform: scale(1,1);
+}
+.btn-three span {
+z-index: 2; 
+display: block;
+position: absolute;
+width: 100%;
+height: 100%; 
+}
+
+        
+    </style>
+</head>
+<body>
+  
+
+
+     <div class="box-1">
+<div class="btn btn-one">
+  <span onclick="main()">Home </span>
+</div>
+</div>
+
+<!-- Hover #2 -->
+<div class="box-2">
+<div class="btn btn-two">
+  <span onclick="myFunction()"> Syllabus</span>
+</div>
+</div>
+
+<!-- Hover #3 -->
+<div class="box-3">
+<div class="btn btn-three">
+  <span  onclick="result()">Result</span>
+</div>
+</div>
+<script>
+  function myFunction() {
+    location.replace("https://piyush6716721.github.io/repo/")
+  }
+
+  function main(){
+    location.replace("https://piyush6716721.github.io/Brainy-Badgers-/")
+  }
+  function result(){
+    location.replace("https://piyush6716721.github.io/result0123/")
+  }
+  </script>
+</body>
+</html>
+
+<!-- syllabus=https://piyush6716721.github.io/repo/ -->
+<!-- main=https://piyush6716721.github.io/Brainy-Badgers-/ -->
